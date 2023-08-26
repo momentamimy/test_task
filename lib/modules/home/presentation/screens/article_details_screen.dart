@@ -56,9 +56,9 @@ class ArticleDetailsScreen extends StatelessWidget {
   }
 
   Future<void> _launchUrl() async {
-    if (!await launchUrl(Uri.parse(article.url ?? ""), mode: LaunchMode.externalApplication)) {
+    if (!await launchUrl(Uri.parse(article.url ?? ""),
+        mode: LaunchMode.externalApplication)) {
       Fluttertoast.showToast(msg: "Could not launch the website");
     }
   }
 }
-

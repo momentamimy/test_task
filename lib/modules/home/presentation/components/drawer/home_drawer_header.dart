@@ -20,8 +20,7 @@ class HomeDrawerHeader extends StatelessWidget {
           ),
           title: const Text("Welcome",
               style: TextStyle(color: Colors.black54, fontSize: 13)),
-          subtitle: const Text("Tony Roshdy",
-              style: TextStyle(fontSize: 15)),
+          subtitle: const Text("Tony Roshdy", style: TextStyle(fontSize: 15)),
           trailing: Image.asset(
             Res.arrow,
             width: 30,

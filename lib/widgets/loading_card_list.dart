@@ -16,76 +16,76 @@ class LoadingCardList extends StatelessWidget {
           decoration: const BoxDecoration(color: Colors.white),
           child: SkeletonItem(
               child: Column(
+            children: [
+              Row(
                 children: [
-                  Row(
-                    children: [
-                      const SkeletonAvatar(
-                        style: SkeletonAvatarStyle(
-                            shape: BoxShape.circle, width: 50, height: 50),
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: SkeletonParagraph(
-                          style: SkeletonParagraphStyle(
-                              lines: 3,
-                              spacing: 6,
-                              lineStyle: SkeletonLineStyle(
-                                randomLength: true,
-                                height: 10,
-                                borderRadius: BorderRadius.circular(8),
-                                minLength: MediaQuery.of(context).size.width / 6,
-                                maxLength: MediaQuery.of(context).size.width / 3,
-                              )),
-                        ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  SkeletonParagraph(
-                    style: SkeletonParagraphStyle(
-                        lines: 3,
-                        spacing: 6,
-                        lineStyle: SkeletonLineStyle(
-                          randomLength: true,
-                          height: 10,
-                          borderRadius: BorderRadius.circular(8),
-                          minLength: MediaQuery.of(context).size.width / 2,
-                        )),
-                  ),
-                  const SizedBox(height: 12),
-                  SkeletonAvatar(
+                  const SkeletonAvatar(
                     style: SkeletonAvatarStyle(
-                      width: double.infinity,
-                      minHeight: MediaQuery.of(context).size.height / 8,
-                      maxHeight: MediaQuery.of(context).size.height / 3,
-                    ),
+                        shape: BoxShape.circle, width: 50, height: 50),
                   ),
-                  const SizedBox(height: 8),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Row(
-                        children: [
-                          SkeletonAvatar(
-                              style: SkeletonAvatarStyle(width: 20, height: 20)),
-                          SizedBox(width: 8),
-                          SkeletonAvatar(
-                              style: SkeletonAvatarStyle(width: 20, height: 20)),
-                          SizedBox(width: 8),
-                          SkeletonAvatar(
-                              style: SkeletonAvatarStyle(width: 20, height: 20)),
-                        ],
-                      ),
-                      SkeletonLine(
-                        style: SkeletonLineStyle(
-                            height: 16,
-                            width: 64,
-                            borderRadius: BorderRadius.circular(8)),
-                      )
-                    ],
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: SkeletonParagraph(
+                      style: SkeletonParagraphStyle(
+                          lines: 3,
+                          spacing: 6,
+                          lineStyle: SkeletonLineStyle(
+                            randomLength: true,
+                            height: 10,
+                            borderRadius: BorderRadius.circular(8),
+                            minLength: MediaQuery.of(context).size.width / 6,
+                            maxLength: MediaQuery.of(context).size.width / 3,
+                          )),
+                    ),
                   )
                 ],
-              )),
+              ),
+              const SizedBox(height: 12),
+              SkeletonParagraph(
+                style: SkeletonParagraphStyle(
+                    lines: 3,
+                    spacing: 6,
+                    lineStyle: SkeletonLineStyle(
+                      randomLength: true,
+                      height: 10,
+                      borderRadius: BorderRadius.circular(8),
+                      minLength: MediaQuery.of(context).size.width / 2,
+                    )),
+              ),
+              const SizedBox(height: 12),
+              SkeletonAvatar(
+                style: SkeletonAvatarStyle(
+                  width: double.infinity,
+                  minHeight: MediaQuery.of(context).size.height / 8,
+                  maxHeight: MediaQuery.of(context).size.height / 3,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Row(
+                    children: [
+                      SkeletonAvatar(
+                          style: SkeletonAvatarStyle(width: 20, height: 20)),
+                      SizedBox(width: 8),
+                      SkeletonAvatar(
+                          style: SkeletonAvatarStyle(width: 20, height: 20)),
+                      SizedBox(width: 8),
+                      SkeletonAvatar(
+                          style: SkeletonAvatarStyle(width: 20, height: 20)),
+                    ],
+                  ),
+                  SkeletonLine(
+                    style: SkeletonLineStyle(
+                        height: 16,
+                        width: 64,
+                        borderRadius: BorderRadius.circular(8)),
+                  )
+                ],
+              )
+            ],
+          )),
         ),
       ),
     );

@@ -15,7 +15,6 @@ class HomeProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-
   final GetAllArticlesUseCase _articlesUseCase;
 
   final articlesList = <Article>[];
@@ -27,10 +26,10 @@ class HomeProvider extends ChangeNotifier {
     _status = value;
     notifyListeners();
   }
+
   String onErrorMessage = "";
 
   HomeProvider({required articlesUseCase}) : _articlesUseCase = articlesUseCase;
-
 
   getAllArticles() async {
     try {
@@ -42,7 +41,7 @@ class HomeProvider extends ChangeNotifier {
     } on ServerException catch (e) {
       status = AppConstants.errorStatus;
       onErrorMessage = e.errorMessage;
-    }catch(e){
+    } catch (e) {
       status = AppConstants.errorStatus;
       onErrorMessage = "Error occurred while communication with Server";
     }

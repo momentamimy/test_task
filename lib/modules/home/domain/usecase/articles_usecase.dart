@@ -5,7 +5,8 @@ import 'package:test_task/modules/home/domain/repository/BaseArticlesRepository.
 class GetAllArticlesUseCase extends UseCase<List<Article>, NoParams> {
   final BaseArticlesRepository _articlesRepository;
 
-  GetAllArticlesUseCase({required BaseArticlesRepository articlesRepository}):_articlesRepository=articlesRepository;
+  GetAllArticlesUseCase({required BaseArticlesRepository articlesRepository})
+      : _articlesRepository = articlesRepository;
 
   @override
   Future<List<Article>> call(NoParams params) async {

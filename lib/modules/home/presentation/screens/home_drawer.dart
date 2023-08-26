@@ -35,7 +35,7 @@ class HomeDrawer extends StatelessWidget {
             onTap: () => _selectItem(context, title: "Wish List")),
         DrawerListItem(
             isSelected: provider.selectedDrawerItem == "E-magazine",
-            icon: Res.e_magazine,
+            icon: Res.eMagazine,
             title: "E-magazine",
             onTap: () => _selectItem(context, title: "E-magazine")),
       ]),

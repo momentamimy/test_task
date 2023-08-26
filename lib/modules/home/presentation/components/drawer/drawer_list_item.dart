@@ -7,7 +7,11 @@ class DrawerListItem extends StatelessWidget {
   final bool isSelected;
 
   const DrawerListItem(
-      {Key? key, required this.icon, required this.title, required this.onTap, required this.isSelected})
+      {Key? key,
+      required this.icon,
+      required this.title,
+      required this.onTap,
+      required this.isSelected})
       : super(key: key);
 
   @override
@@ -16,7 +20,7 @@ class DrawerListItem extends StatelessWidget {
       onTap: () => onTap(),
       child: Row(
         children: [
-          if(isSelected) Container(color: Colors.black,height: 50,width: 5),
+          if (isSelected) Container(color: Colors.black, height: 50, width: 5),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(20),

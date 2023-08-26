@@ -25,20 +25,18 @@ class ArticleDetailsCard extends StatelessWidget {
                   width: double.infinity,
                   fit: BoxFit.cover,
                   imageUrl: article.urlToImage ?? "",
-                  progressIndicatorBuilder:
-                      (context, url, downloadProgress) => Center(
-                      child: CircularProgressIndicator(
-                          value: downloadProgress.progress)),
-                  errorWidget: (context, url, error) =>
-                  const Icon(Icons.error),
+                  progressIndicatorBuilder: (context, url, downloadProgress) =>
+                      Center(
+                          child: CircularProgressIndicator(
+                              value: downloadProgress.progress)),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 10, vertical: 4),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   child: Text(
                     Utils.getDateTimeFormat(article.publishedAt ?? ""),
-                    style:
-                    const TextStyle(color: Colors.white, fontSize: 12),
+                    style: const TextStyle(color: Colors.white, fontSize: 12),
                   ),
                 )
               ],
@@ -58,7 +56,7 @@ class ArticleDetailsCard extends StatelessWidget {
                     Text(
                       "By ${article.author ?? ""}",
                       style:
-                      const TextStyle(color: Colors.black45, fontSize: 15),
+                          const TextStyle(color: Colors.black45, fontSize: 15),
                     ),
                     const SizedBox(height: 10),
                     Expanded(
@@ -83,4 +81,3 @@ class ArticleDetailsCard extends StatelessWidget {
     );
   }
 }
-

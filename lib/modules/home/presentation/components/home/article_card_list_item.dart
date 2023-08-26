@@ -64,7 +64,7 @@ class ArticleCardListItem extends StatelessWidget {
                     child: Text(
                       Utils.getDateTimeFormat(article.publishedAt ?? ""),
                       style:
-                      const TextStyle(color: Colors.black45, fontSize: 12),
+                          const TextStyle(color: Colors.black45, fontSize: 12),
                     ),
                   ),
                 ),

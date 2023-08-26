@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class OpenUrlButton extends StatelessWidget {
   final Function onTap;
+
   const OpenUrlButton({super.key, required this.onTap});
 
   @override
@@ -18,8 +19,7 @@ class OpenUrlButton extends StatelessWidget {
         child: SizedBox(
           width: double.infinity,
           child: Center(
-            child: Text("OPEN WEBSITE",
-                style: TextStyle(color: Colors.white)),
+            child: Text("OPEN WEBSITE", style: TextStyle(color: Colors.white)),
           ),
         ),
       ),

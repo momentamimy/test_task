@@ -14,7 +14,8 @@ class AppErrorWidget extends StatelessWidget {
         children: [
           Text(msg),
           const SizedBox(height: 5),
-          ElevatedButton(onPressed: () => onReload(), child: const Text("Reload Data"))
+          ElevatedButton(
+              onPressed: () => onReload(), child: const Text("Reload Data"))
         ],
       ),
     );

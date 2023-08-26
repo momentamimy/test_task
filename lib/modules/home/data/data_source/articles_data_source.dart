@@ -29,9 +29,9 @@ class ArticlesRemoteDataSource extends BaseArticlesRemoteDataSource {
     await NetworkConnection.check();
     final response = ResponseStatusExceptions.handleResponseStatus(
         await dio.get(Apis.fetchSecondNewsApi));
-      final secondArticlesList = (response.data['articles'] as List)
-          .map((article) => ArticleModel.fromJson(article))
-          .toList();
-      return secondArticlesList;
-    }
+    final secondArticlesList = (response.data['articles'] as List)
+        .map((article) => ArticleModel.fromJson(article))
+        .toList();
+    return secondArticlesList;
+  }
 }
