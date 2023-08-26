@@ -6,6 +6,16 @@ import 'package:test_task/modules/home/domain/entities/article.dart';
 import 'package:test_task/modules/home/domain/usecase/articles_usecase.dart';
 
 class HomeProvider extends ChangeNotifier {
+  String _selectedDrawerItem = "Explore";
+
+  String get selectedDrawerItem => _selectedDrawerItem;
+
+  set selectedDrawerItem(String value) {
+    _selectedDrawerItem = value;
+    notifyListeners();
+  }
+
+
   final GetAllArticlesUseCase _articlesUseCase;
 
   final articlesList = <Article>[];
